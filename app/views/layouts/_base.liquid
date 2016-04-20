@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>{% block title %}Default title{% endblock %}</title>
+    {% block stylesheets %}{{ 'application'|stylesheet_link_tag }}{% endblock %}
+    {% csrf_meta_tags %}
+</head>
+<body>
+{% block body %}{% block content %}{% endblock %}{% endblock %}
+{% block javascripts %}{{ 'application'|javascript_include_tag }}{% endblock %}
+</body>
+</html>

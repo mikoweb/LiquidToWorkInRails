@@ -1,0 +1,11 @@
+{% extends "layouts/base" %}
+
+{% block content %}
+    <a href="{{ 'root'|path }}">{{ 'hello'|translate }}</a>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+{% endblock %}
+
+{% block javascripts %}
+    {{ block.super }}
+    <script type="text/javascript">console.log('Hello, World!');</script>
+{% endblock %}
